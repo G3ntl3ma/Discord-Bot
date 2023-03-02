@@ -1,4 +1,4 @@
-const apiKey = '7a16aa231e494dc59e3193ee84711a99';
+const apiKey = secrets.REBRANDLY_KEY;
 const url = 'https://api.rebrandly.com/v1/links';
 
 module.exports = {
