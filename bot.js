@@ -81,4 +81,4 @@ client.on('message', message =>{
 
 
 //login information. dont tell anyone
-client.login('MTA1MzY5MTkwMzI4MDk0NzMzMA.GFXJ91.MKAIKPBCTokY-2RJtA_0yOt0QFzpQXcg3iQXRs');
+client.login(secrets.DISCORD_PASS);
