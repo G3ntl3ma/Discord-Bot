@@ -1,0 +1,19 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "express": "^4.18.2",
+    "express-ws": "^5.0.2",
+    "mongoose": "^6.9.0",
+    "puppeteer": "^19.4.1",
+    "random-words": "^1.2.1"
+  }
+}
