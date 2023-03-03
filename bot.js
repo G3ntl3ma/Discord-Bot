@@ -16,12 +16,6 @@ const connect = 'mongodb+srv://G3ntl3ma:GOfNcqVEGquKc8Y1@discordbot.z8dspps.mong
 const prefix = '!';
 
 //gets all the commands out of the commands folder
-const wiki = require('./commands/wiki');
-const ping = require('./commands/ping');
-const short = require('./commands/short');
-const permissions = require('./commands/permissions')
-const hangman = require('./commands/hangman');
-const command = require('./commands/embeds')
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
@@ -74,6 +68,9 @@ client.on('message', message =>{
     }
     else if(command[0] === 'command'){
         client.commands.get('command').execute(message, args, Discord);
+    }
+     else if(command[0] === 'clear'){
+        client.commands.get('clear').execute(message, args)
     }
 })
 
