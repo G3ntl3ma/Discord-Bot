@@ -30,7 +30,12 @@ client.once('ready', () =>{
 })
 
 
-
+//handeling everything for when a person joins
+client.on('guildMemberAdd', guildMember => {
+    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'member');
+    guildMember.roles.add(welcomeRole);
+    guildMember.guild.channels.cache.get('1081662156606550128').send(`Welcome to the Server ${guildMember.toString()}!`)
+});
 
 
 //all commands are handled here
@@ -71,6 +76,12 @@ client.on('message', message =>{
     }
      else if(command[0] === 'clear'){
         client.commands.get('clear').execute(message, args)
+    }
+    else if(command[0] === 'mute'){
+        client.commands.get('mute').execute(message, args)
+    }
+    else if(command[0] === 'unmute'){
+        client.commands.get('unmute').execute(message, args)
     }
 })
 
