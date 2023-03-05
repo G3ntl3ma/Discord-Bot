@@ -12,6 +12,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const connect = 'mongodb+srv://G3ntl3ma:GOfNcqVEGquKc8Y1@discordbot.z8dspps.mongodb.net/?retryWrites=true&w=majority';
+const memberCounter = require('./counters/member-counter')
 
 const prefix = '!';
 
@@ -25,8 +26,9 @@ for(const file of commandFiles){
 }
 
 //Sends a message if the bot is online
-client.once('ready', () =>{
+client.on('ready', () =>{
     console.log('The Bot is online!')
+    memberCounter(client)
 })
 
 
