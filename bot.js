@@ -76,7 +76,7 @@ client.on('message', message =>{
     else if(command[0] === 'command'){
         client.commands.get('command').execute(message, args, Discord);
     }
-     else if(command[0] === 'clear'){
+    else if(command[0] === 'clear'){
         client.commands.get('clear').execute(message, args)
     }
     else if(command[0] === 'mute'){
@@ -85,8 +85,14 @@ client.on('message', message =>{
     else if(command[0] === 'unmute'){
         client.commands.get('unmute').execute(message, args)
     }
-     else if(command[0] === 'reactionrole'){
+    else if(command[0] === 'reactionrole'){
         client.commands.get('reactionrole').execute(message, args, Discord, client);
+    }
+    else if(command[0] === 'play'){
+        client.commands.get('play').execute(message, args);
+    }
+    else if(command[0] === 'leave'){
+        client.commands.get('leave').execute(message, args);
     }
 })
 
