@@ -1,7 +1,8 @@
 module.exports = {
     name : 'hangman',
+    permissions : [],
     description : 'Starts a game of hangman',
-    execute(message, client){
+    execute(client, Discord, message, args){
         message.channel.send('Why is it not workin :(');
         message.channel.send('Hello Everything is fine so far');
         var randomWords = require('random-words')

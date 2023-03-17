@@ -1,15 +1,16 @@
-const apiKey = secrets.REBRANDLY_KEY;
+const apiKey = '7a16aa231e494dc59e3193ee84711a99';
 const url = 'https://api.rebrandly.com/v1/links';
 
 module.exports = {
     name : "short",
+    permissions : [],
     description : 'Gives back a shorter Link from the given Link.',
-    execute(message, link){
+    execute(client, Discord, message, args){
 
         (async ()=>{
 
             //Turns the link into a json-string
-            const data = JSON.stringify({destination: link});
+            const data = JSON.stringify({destination: args[1]});
             //calls the API to shorten the link
             const response = await fetch(url, {
                 method: "POST",

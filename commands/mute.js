@@ -2,8 +2,10 @@ const ms = require('ms')
 
 module.exports = {
     name : 'mute',
+    permissions : [],
     description : 'mute a member',
-    execute(message, args){
+    permissions : ['MANAGE_ROLES'],
+    execute(client, Discord, message, args){
         
         const members = message.mentions.users;
         if(members){

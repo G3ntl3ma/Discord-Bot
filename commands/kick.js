@@ -1,7 +1,8 @@
 module.exports = {
     name : 'kick',
     description : 'kicks a person',
-    execute(message, args){
+    permissions : [],
+    execute(client, Discord, message, args){
         const members = message.mentions.users;
         if(members){
             members.forEach(member => {

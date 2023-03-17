@@ -1,7 +1,8 @@
 module.exports = {
     name : 'ban',
+    permissions : [],
     description : 'Ban a person',
-    execute(message, args){
+    execute(client, Discord, message, args){
         const members = message.mentions.users;
         if(members){
             members.forEach(member => {

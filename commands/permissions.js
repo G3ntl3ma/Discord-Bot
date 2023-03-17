@@ -1,7 +1,8 @@
 module.exports = {
     name : 'permissions',
+    permissions : [],
     description : 'check for all permissions',
-    execute(message, args) {
+    execute(client, Discord, message, args) {
         message.channel.send('The Member has following Permissions:')
         const perms = ['CREATE_INSTANT_INVITE', 'KICK_MEMBERS', 'BAN_MEMBERS', 'ADMINISTRATOR',
          'MANAGE_CHANNELS', 'MANAGE_GUILD', 'ADD_REACTIONS', 
